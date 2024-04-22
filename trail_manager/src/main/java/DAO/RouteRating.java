@@ -48,4 +48,3 @@ public class RouteRating {
         this.comment = comment;
     }
 }
-
