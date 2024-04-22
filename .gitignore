@@ -38,5 +38,5 @@ log/
 .DS_Store
 Thumbs.db
 
-#InputFiles.lst (if is generated and not meant to be versioned)
-inputFiles.lst
+# Ignore the target directory
+**/target/*
