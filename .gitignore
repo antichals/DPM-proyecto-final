@@ -1,0 +1,42 @@
+# Maven target directory
+target/
+
+# IDE files (e.g., IntelliJ, Eclipse)
+.idea/
+*.iml
+*.ipr
+*.iws
+.classpath
+.project
+.settings/
+
+# Maven build metadata file
+pom.xml.tag
+pom.xml.releaseBackup
+
+# Maven build process properties
+release.properties
+dependency-reduced-pom.xml
+
+# Logs
+log/
+*.log
+
+# Temporary files
+*.swp
+*~
+
+# Compiled Java classes
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+#InputFiles.lst (if is generated and not meant to be versioned)
+inputFiles.lst
