@@ -1,34 +1,92 @@
 package DAO;
+
 import java.util.List;
 
-public interface Route {
-    String getId();
-    void setId(String id);
+public class Route {
+    // Attributes
+    private String id;
+    private List<LatLng> coordinates;
+    private double length;
+    private String difficulty;
+    private String terrainType;
+    private String description;
+    private List<PointOfInterest> pointsOfInterest;
+    private double estimatedDurationInHours;
 
-    List<String> getCoordinates();
-    void setCoordinates(List<String> coordinates);
+    // Constructor
+    public Route(String id, List<LatLng> coordinates, double length, String difficulty, String terrainType, String description, List<PointOfInterest> pointsOfInterest, double estimatedDurationInHours) {
+        this.id = id;
+        this.coordinates = coordinates;
+        this.length = length;
+        this.difficulty = difficulty;
+        this.terrainType = terrainType;
+        this.description = description;
+        this.pointsOfInterest = pointsOfInterest;
+        this.estimatedDurationInHours = estimatedDurationInHours;
+    }
 
-    String getStartLocation();
-    void setStartLocation(String startLocation);
+    // Getter and setter methods for each attribute
+    public String getId() {
+        return id;
+    }
 
-    String getEndLocation();
-    void setEndLocation(String endLocation);
+    public void setId(String id) {
+        this.id = id;
+    }
 
-    double getLength();
-    void setLength(double length);
+    public List<LatLng> getCoordinates() {
+        return coordinates;
+    }
 
-    String getDifficulty();
-    void setDifficulty(String difficulty);
+    public void setCoordinates(List<LatLng> coordinates) {
+        this.coordinates = coordinates;
+    }
 
-    String getTerrainType();
-    void setTerrainType(String terrainType);
+    public double getLength() {
+        return length;
+    }
 
-    String getDescription();
-    void setDescription(String description);
+    public void setLength(double length) {
+        this.length = length;
+    }
 
-    List<String> getPointsOfInterest();
-    void setPointsOfInterest(List<String> pointsOfInterest);
+    public String getDifficulty() {
+        return difficulty;
+    }
 
-    double getEstimatedDurationInHours();
-    void setEstimatedDurationInHours(double estimatedDurationInHours);
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
+    }
+
+    public String getTerrainType() {
+        return terrainType;
+    }
+
+    public void setTerrainType(String terrainType) {
+        this.terrainType = terrainType;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public List<PointOfInterest> getPointsOfInterest() {
+        return pointsOfInterest;
+    }
+
+    public void setPointsOfInterest(List<PointOfInterest> pointsOfInterest) {
+        this.pointsOfInterest = pointsOfInterest;
+    }
+
+    public double getEstimatedDurationInHours() {
+        return estimatedDurationInHours;
+    }
+
+    public void setEstimatedDurationInHours(double estimatedDurationInHours) {
+        this.estimatedDurationInHours = estimatedDurationInHours;
+    }
 }

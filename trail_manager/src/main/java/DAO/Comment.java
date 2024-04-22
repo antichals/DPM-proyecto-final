@@ -70,4 +70,3 @@ public class Comment {
         this.timestamp = timestamp;
     }
 }
-
