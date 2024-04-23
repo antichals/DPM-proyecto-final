@@ -6,6 +6,7 @@ public class Photo {
     // Attributes
     private int photoId;
     private int routeId;
+    private int userId;
     private String projectPath;
     private String content;
     private int likesCount;
@@ -39,6 +40,14 @@ public class Photo {
         this.routeId = routeId;
     }
 
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+    
     public String getProjectPath() {
         return projectPath;
     }
