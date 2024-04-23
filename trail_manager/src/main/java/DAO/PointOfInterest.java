@@ -5,7 +5,6 @@ public class PointOfInterest {
     // Attributes
     private String name;
     private LatLng location;
-    private int likesCount;
     private List<Photo> photos;
     private List<Comment> comments;
 
@@ -30,14 +29,6 @@ public class PointOfInterest {
 
     public void setLocation(LatLng location) {
         this.location = location;
-    }
-
-    public int getLikesCount() {
-        return likesCount;
-    }
-
-    public void setLikesCount(int likesCount) {
-        this.likesCount = likesCount;
     }
 
     public List<Photo> getPhotos() {
