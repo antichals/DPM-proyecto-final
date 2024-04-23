@@ -4,12 +4,12 @@ import java.util.List;
 public class PointOfInterest {
     // Attributes
     private String name;
-    private LatLng location;
+    private LatitudeLongitude location;
     private List<Photo> photos;
     private List<Comment> comments;
 
     // Constructor
-    public PointOfInterest(String name, LatLng location, String description) {
+    public PointOfInterest(String name, LatitudeLongitude location, String description) {
         this.name = name;
         this.location = location;
     }
@@ -23,11 +23,11 @@ public class PointOfInterest {
         this.name = name;
     }
 
-    public LatLng getLocation() {
+    public LatitudeLongitude getLocation() {
         return location;
     }
 
-    public void setLocation(LatLng location) {
+    public void setLocation(LatitudeLongitude location) {
         this.location = location;
     }
 

@@ -5,7 +5,7 @@ import java.util.List;
 public class Route {
     // Attributes
     private String id;
-    private List<LatLng> coordinates;
+    private List<LatitudeLongitude> coordinates;
     private double length;
     private String difficulty;
     private String terrainType;
@@ -14,7 +14,7 @@ public class Route {
     private double estimatedDurationInHours;
 
     // Constructor
-    public Route(String id, List<LatLng> coordinates, double length, String difficulty, String terrainType, String description, List<PointOfInterest> pointsOfInterest, double estimatedDurationInHours) {
+    public Route(String id, List<LatitudeLongitude> coordinates, double length, String difficulty, String terrainType, String description, List<PointOfInterest> pointsOfInterest, double estimatedDurationInHours) {
         this.id = id;
         this.coordinates = coordinates;
         this.length = length;
@@ -34,11 +34,11 @@ public class Route {
         this.id = id;
     }
 
-    public List<LatLng> getCoordinates() {
+    public List<LatitudeLongitude> getCoordinates() {
         return coordinates;
     }
 
-    public void setCoordinates(List<LatLng> coordinates) {
+    public void setCoordinates(List<LatitudeLongitude> coordinates) {
         this.coordinates = coordinates;
     }
 

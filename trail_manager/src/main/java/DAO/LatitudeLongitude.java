@@ -1,13 +1,13 @@
 package DAO;
 
 // LatLng class for representing coordinates
-public class LatLng {
+public class LatitudeLongitude {
     // Attributes
     private double latitude;
     private double longitude;
 
     // Constructor
-    public LatLng(double latitude, double longitude) {
+    public LatitudeLongitude(double latitude, double longitude) {
         this.latitude = latitude;
         this.longitude = longitude;
     }
