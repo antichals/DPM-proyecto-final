@@ -4,6 +4,7 @@ public class RouteRating {
     // Attributes
     private int ratingId;
     private int routeId;
+    private int userID;
     private int score;
     private String comment;
 
@@ -30,6 +31,14 @@ public class RouteRating {
 
     public void setRouteId(int routeId) {
         this.routeId = routeId;
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
 
     public int getScore() {

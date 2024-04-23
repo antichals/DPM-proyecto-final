@@ -6,6 +6,7 @@ public class Comment {
     // Attributes
     private int commentId;
     private int routeId;
+    private int userID;
     private String content;
     private int likesCount;
     private String location;
@@ -36,6 +37,14 @@ public class Comment {
 
     public void setRouteId(int routeId) {
         this.routeId = routeId;
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
 
     public String getContent() {

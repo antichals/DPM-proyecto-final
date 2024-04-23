@@ -1,16 +1,18 @@
 package DAO;
+import java.util.List;
 
 public class PointOfInterest {
     // Attributes
     private String name;
     private LatLng location;
-    private String description;
+    private int likesCount;
+    private List<Photo> photos;
+    private List<Comment> comments;
 
     // Constructor
     public PointOfInterest(String name, LatLng location, String description) {
         this.name = name;
         this.location = location;
-        this.description = description;
     }
 
     // Getter and setter methods for each attribute
@@ -30,12 +32,27 @@ public class PointOfInterest {
         this.location = location;
     }
 
-    public String getDescription() {
-        return description;
+    public int getLikesCount() {
+        return likesCount;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setLikesCount(int likesCount) {
+        this.likesCount = likesCount;
+    }
+
+    public List<Photo> getPhotos() {
+        return photos;
+    }
+
+    public void setPhotos(List<Photo> photos) {
+        this.photos = photos;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 }
-
