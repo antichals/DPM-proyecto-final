@@ -10,7 +10,7 @@ public class Route {
     private String difficulty;
     private String terrainType;
     private String description;
-    private List<PointOfInterest> pointsOfInterest; // Son ubicaciones
+    private List<PointOfInterest> pointsOfInterest; // Locations
     private double estimatedDurationInHours;
 
     // Constructor

@@ -8,16 +8,14 @@ public class Comment {
     private int routeId;
     private int userID;
     private String content;
-    private int likesCount;
     private String location;
     private Date timestamp;
 
     // Constructor
-    public Comment(int commentId, int routeId, String content, int likesCount, String location, Date timestamp) {
+    public Comment(int commentId, int routeId, String content, String location, Date timestamp) {
         this.commentId = commentId;
         this.routeId = routeId;
         this.content = content;
-        this.likesCount = likesCount;
         this.location = location;
         this.timestamp = timestamp;
     }
@@ -53,14 +51,6 @@ public class Comment {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public int getLikesCount() {
-        return likesCount;
-    }
-
-    public void setLikesCount(int likesCount) {
-        this.likesCount = likesCount;
     }
 
     public String getLocation() {

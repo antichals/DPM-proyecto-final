@@ -12,7 +12,7 @@ public class Photo {
     private Date timestamp;
 
     // Constructor
-    public Photo(int photoId, int routeId, int userId, String imgUrl, int likesCount, String location, Date timestamp) {
+    public Photo(int photoId, int routeId, int userId, String imgUrl, String location, Date timestamp) {
         this.photoId = photoId;
         this.routeId = routeId;
         this.userId = userId;
