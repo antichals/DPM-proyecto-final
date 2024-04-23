@@ -153,4 +153,41 @@ public class Route {
     public void deleteRating(Rating rating) {
         this.ratings.remove(rating);
     }
+
+    // Print method
+    public void printRoute() {
+        System.out.println("Route ID: " + this.id);
+        System.out.println("Route Name: " + this.name);
+        System.out.println("Route Length: " + this.length);
+        System.out.println("Route Difficulty: " + this.difficulty);
+        System.out.println("Route Terrain Type: " + this.terrainType);
+        System.out.println("Route Description: " + this.description);
+        System.out.println("Route Estimated Duration: " + this.estimatedDurationInHours);
+        System.out.println("Route Coordinates: ");
+        for (LatitudeLongitude coordinate : this.coordinates) {
+            System.out.println("Latitude: " + coordinate.getLatitude() + ", Longitude: " + coordinate.getLongitude());
+        }
+        System.out.println("Route Photos: ");
+        for (Photo photo : this.photos) {
+            System.out.println("Username: " + photo.getUsername());
+            System.out.println("Image URL: " + photo.getImgUrl());
+            System.out.println("Location: " + photo.getLocation());
+            System.out.println("Timestamp: " + photo.getTimestamp());
+            System.out.println();
+        }
+        System.out.println("Route Comments: ");
+        for (Comment comment : this.comments) {
+            System.out.println("Username: " + comment.getUsername());
+            System.out.println("Content: " + comment.getContent());
+            System.out.println("Location: " + comment.getLocation());
+            System.out.println("Timestamp: " + comment.getTimestamp());
+            System.out.println();
+        }
+        System.out.println("Route Ratings: ");
+        for (Rating rating : this.ratings) {
+            System.out.println("Username: " + rating.getUsername());
+            System.out.println("Rating: " + rating.getRating());
+            System.out.println();
+        }
+    }
 }
