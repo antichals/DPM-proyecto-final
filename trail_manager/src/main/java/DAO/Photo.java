@@ -4,71 +4,49 @@ import java.util.Date;
 
 public class Photo {
     // Attributes
-    private int photoId;
-    private int routeId;
-    private int userId;
+    private String username;
     private String imgUrl;
     private String location;
     private Date timestamp;
 
     // Constructor
-    public Photo(int photoId, int routeId, int userId, String imgUrl, String location, Date timestamp) {
-        this.photoId = photoId;
-        this.routeId = routeId;
-        this.userId = userId;
+    public Photo(String username, String imgUrl, String location, Date timestamp) {
+        this.username = username;
         this.imgUrl = imgUrl;
         this.location = location;
         this.timestamp = timestamp;
     }
 
     // Getter and setter methods for each attribute
-    public int getPhotoId() {
-        return photoId;
+    public String getUsername() {
+        return username;
     }
 
-    public void setPhotoId(int photoId) {
-        this.photoId = photoId;
-    }
-
-    public int getRouteId() {
-        return routeId;
-    }
-
-    public void setRouteId(int routeId) {
-        this.routeId = routeId;
-    }
-
-    public int getUserId() {
-        return userId;
-    }
-
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
-    
     public String getImgUrl() {
         return imgUrl;
-    }
-
-    public void setImgUrl(String projectPath) {
-        this.imgUrl = projectPath;
     }
 
     public String getLocation() {
         return location;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
     public Date getTimestamp() {
         return timestamp;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public void setTimestamp(Date timestamp) {
         this.timestamp = timestamp;
     }
 }
-
-
