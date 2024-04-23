@@ -7,18 +7,16 @@ public class Photo {
     private int photoId;
     private int routeId;
     private int userId;
-    private String projectPath;
-    private String content;
-    private int likesCount;
+    private String imgUrl;
     private String location;
     private Date timestamp;
 
     // Constructor
-    public Photo(int photoId, int routeId, String content, int likesCount, String location, Date timestamp) {
+    public Photo(int photoId, int routeId, int userId, String imgUrl, int likesCount, String location, Date timestamp) {
         this.photoId = photoId;
         this.routeId = routeId;
-        this.content = content;
-        this.likesCount = likesCount;
+        this.userId = userId;
+        this.imgUrl = imgUrl;
         this.location = location;
         this.timestamp = timestamp;
     }
@@ -48,28 +46,12 @@ public class Photo {
         this.userId = userId;
     }
     
-    public String getProjectPath() {
-        return projectPath;
+    public String getImgUrl() {
+        return imgUrl;
     }
 
-    public void setProjectPath(String projectPath) {
-        this.projectPath = projectPath;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public int getLikesCount() {
-        return likesCount;
-    }
-
-    public void setLikesCount(int likesCount) {
-        this.likesCount = likesCount;
+    public void setImgUrl(String projectPath) {
+        this.imgUrl = projectPath;
     }
 
     public String getLocation() {
