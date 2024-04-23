@@ -1,16 +1,15 @@
 package DAO;
 import java.util.List;
 
-// Point of Interest class to reprensent interesting locations
 public class PointOfInterest {
     // Attributes
     private String name;
-    private LatitudLongitud location;
+    private LatLng location;
     private List<Photo> photos;
     private List<Comment> comments;
 
     // Constructor
-    public PointOfInterest(String name, LatitudLongitud location, String description) {
+    public PointOfInterest(String name, LatLng location, String description) {
         this.name = name;
         this.location = location;
     }
@@ -24,11 +23,11 @@ public class PointOfInterest {
         this.name = name;
     }
 
-    public LatitudLongitud getLocation() {
+    public LatLng getLocation() {
         return location;
     }
 
-    public void setLocation(LatitudLongitud location) {
+    public void setLocation(LatLng location) {
         this.location = location;
     }
 
