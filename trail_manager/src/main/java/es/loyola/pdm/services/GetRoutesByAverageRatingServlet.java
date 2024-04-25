@@ -22,7 +22,7 @@ public class GetRoutesByAverageRatingServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         double averageRating = Double.parseDouble(request.getParameter("averageRating"));
-        RouteManager routeManager = new RouteManager();
+        RouteManager routeManager = RouteManager.getInstance();
         JSONArray routesJsonArray = new JSONArray();
         
         for (Route route : routeManager.getRoutes()) {

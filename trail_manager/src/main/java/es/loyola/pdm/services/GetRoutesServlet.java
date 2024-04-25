@@ -20,7 +20,7 @@ public class GetRoutesServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RouteManager routeManager = new RouteManager();
+        RouteManager routeManager = RouteManager.getInstance();
         JSONArray routesJsonArray = new JSONArray();
         
         for (Route route : routeManager.getRoutes()) {

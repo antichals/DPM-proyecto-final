@@ -22,7 +22,7 @@ public class GetRoutesByDistanceServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         double distance = Double.parseDouble(request.getParameter("distance"));
-        RouteManager routeManager = new RouteManager();
+        RouteManager routeManager = RouteManager.getInstance();
         JSONArray routesJsonArray = new JSONArray();
         
         for (Route route : routeManager.getRoutes()) {

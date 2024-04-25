@@ -22,7 +22,7 @@ public class GetRoutesByDifficultyServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String difficulty = request.getParameter("difficulty");
-        RouteManager routeManager = new RouteManager();
+        RouteManager routeManager = RouteManager.getInstance();
         JSONArray routesJsonArray = new JSONArray();
         
         for (Route route : routeManager.getRoutes()) {

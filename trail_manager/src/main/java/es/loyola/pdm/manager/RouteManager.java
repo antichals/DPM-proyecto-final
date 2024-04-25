@@ -11,11 +11,19 @@ import java.util.Random;
 import java.util.Date;
 
 public class RouteManager {
+    private static RouteManager instance;
     private List<Route> routes;
 
     public RouteManager() {
         this.routes = new ArrayList<>();
         generateRoutes();
+    }
+
+    public static synchronized RouteManager getInstance() {
+        if (instance == null) {
+            instance = new RouteManager();
+        }
+        return instance;
     }
 
     public List<Route> getRoutes() {
