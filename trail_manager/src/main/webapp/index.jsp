@@ -23,5 +23,11 @@
         <input type="number" id="distance" name="distance" step="0.1" min="0">
         <input type="submit" value="Get Routes By Distance">
     </form>
+    <h1>Test GetRoutesByEstimatedDurationServlet</h1>
+        <form action="getRoutesByEstimatedDuration" method="get">
+        <label for="estimatedDurationInHours">Estimated Duration in Hours:</label>
+        <input type="number" id="estimatedDurationInHours" name="estimatedDurationInHours" step="0.1" min="0">
+    <input type="submit" value="Get Routes By Estimated Duration">
+</form>
 </body>
 </html>
