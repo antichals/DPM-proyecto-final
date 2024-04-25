@@ -37,6 +37,13 @@
         <input type="text" id="terrainType" name="terrainType">
         <input type="submit" value="Get Routes By Terrain Type">
     </form>
+
+    <h1>Test GetRoutesByDifficultyServlet</h1>
+    <form action="getRoutesByDifficulty" method="get">
+        <label for="difficulty">Difficulty:</label>
+        <input type="text" id="difficulty" name="difficulty">
+        <input type="submit" value="Get Routes By Difficulty">
+    </form>
     
 </body>
 </html>
