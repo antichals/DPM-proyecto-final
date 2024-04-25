@@ -4,14 +4,13 @@ import java.util.Date;
 
 public class Comment {
     // Attributes
-    private int id;
     private String username;
     private String content;
     private String location;
     private Date timestamp;
 
     // Constructor
-    public Comment(int id, String username, String content, String location, Date timestamp) {
+    public Comment(String username, String content, String location, Date timestamp) {
         this.username = username;
         this.content = content;
         this.location = location;
@@ -19,10 +18,6 @@ public class Comment {
     }
 
     // Getter and setter methods for each attribute
-    public int getId() {
-        return id;
-    }
-
     public String getUsername() {
         return username;
     }
@@ -37,10 +32,6 @@ public class Comment {
 
     public Date getTimestamp() {
         return timestamp;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
     
     public void setUsername(String username) {
