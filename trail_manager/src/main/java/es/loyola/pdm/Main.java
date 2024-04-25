@@ -1,8 +1,10 @@
-import DAO.Comment;
-import DAO.Route;
-import DAO.LatitudeLongitude;
-import DAO.Photo;
-import DAO.Rating;
+package es.loyola.pdm;
+
+import es.loyola.pdm.DAO.Comment;
+import es.loyola.pdm.DAO.Route;
+import es.loyola.pdm.DAO.LatitudeLongitude;
+import es.loyola.pdm.DAO.Photo;
+import es.loyola.pdm.DAO.Rating;
 
 import java.util.ArrayList;
 import java.util.List;

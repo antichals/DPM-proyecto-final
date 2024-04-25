@@ -6,6 +6,13 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import es.loyola.pdm.DAO.Comment;
+import es.loyola.pdm.DAO.LatitudeLongitude;
+import es.loyola.pdm.DAO.Photo;
+import es.loyola.pdm.DAO.Rating;
+import es.loyola.pdm.DAO.Route;
+import es.loyola.pdm.DAO.User;
+
 public class TestDAOs {
 
     @Test

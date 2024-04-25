@@ -1,4 +1,4 @@
-package DAO;
+package es.loyola.pdm.DAO;
 
 import java.util.List;
 
@@ -15,6 +15,7 @@ public class Route {
     private String terrainType;
     private String description;
     private double estimatedDurationInHours;
+    private double averageRating;
 
     // Constructor
     public Route(int id, List<LatitudeLongitude> coordinates, List<Photo> photos, List<Comment> comments, List<Rating> ratings, String name, double length, String difficulty, String terrainType, String description, double estimatedDurationInHours) {
@@ -29,6 +30,7 @@ public class Route {
         this.terrainType = terrainType;
         this.description = description;
         this.estimatedDurationInHours = estimatedDurationInHours;
+        this.averageRating = calculateAverageRating(ratings);
     }
 
     // Getter and setter methods for each attribute
@@ -76,6 +78,10 @@ public class Route {
         return estimatedDurationInHours;
     }
 
+    public double getAverageRating() {
+        return averageRating;
+    }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -120,6 +126,10 @@ public class Route {
         this.estimatedDurationInHours = estimatedDurationInHours;
     }
 
+    public void setAverageRating(double averageRating) {
+        this.averageRating = averageRating;
+    }
+
     // Addition methods
     public void addCoordinate(LatitudeLongitude coordinate) {
         this.coordinates.add(coordinate);
@@ -133,8 +143,21 @@ public class Route {
         this.comments.add(comment);
     }
 
+    // Add a rating and update the average rating
     public void addRating(Rating rating) {
         this.ratings.add(rating);
+        this.averageRating = calculateAverageRating(this.ratings);
+    }
+
+    // Calculate the average rating
+    private double calculateAverageRating(List<Rating> ratings) {
+        double sum = 0.0;
+        if (ratings.size() > 0) {
+            for (Rating rating : ratings) {
+                sum += rating.getRating();
+            }
+        }
+        return sum / ratings.size();
     }
 
     // Deletion methods

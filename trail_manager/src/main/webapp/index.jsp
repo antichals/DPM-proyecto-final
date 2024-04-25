@@ -1,62 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Servicios Web Alumnos</title>
-  </head>
+    <title>Test Servlets</title>
+</head>
 <body>
-<ul> 
-<li><h3>Metodo <i>getAlumnosJson</i>: Devuelve el listado de alumnos</h3>
-<p><b>Tipo peticion:</b> GET</p>
-<p><b>Parametro entrada:</b>  - </p>
-<p><b>Salida:</b> JSon de la forma: <i>{"code":"code", "message":"message", "result": [{"nombre":"Nombre 1","titulacion":"Titulacion 1","id":"11111111A","edad":20},{"nombre":"Nombre 4","titulacion":"Titulacion 2","id":"44444444A","edad":30}]}</i></p>
+    <h1>Test GetRoutesServlet</h1>
+    <form action="getRoutes" method="get">
+        <input type="submit" value="Get Routes">
+    </form>
 
-<a href="getAlumnosJson">Metodo Get - Mostrar todos los alumnos</a>
-</li>
+    <h1>Test GetRoutesByAverageRatingServlet</h1>
+    <form action="getRoutesByAverageRating" method="get">
+        <label for="averageRating">Average Rating:</label>
+        <input type="number" id="averageRating" name="averageRating" step="0.1" min="0" max="5">
+        <input type="submit" value="Get Routes By Average Rating">
+    </form>
 
-<li><h3>Metodo <i>filtraAlumnosPorEdad</i>: Devuelve aquellos alumnos mayores que la edad introducida</h3>
-<p><b>Tipo peticion:</b> POST</p>
-<p><b>Parametro entrada:</b> edad (tipo <i>entero</i>)</p>
-<p><b>Salida:</b> JSon de la forma: <i>{"code":"code", "message":"message", "result": [{"nombre":"Nombre 1","titulacion":"Titulacion 1","id":"11111111A","edad":20},{"nombre":"Nombre 4","titulacion":"Titulacion 2","id":"44444444A","edad":30}]}</i></p>
-
-<form action="filtraAlumnosPorEdad" method="POST">
-<label for="edad">Edad:</label> <input type="text" name="edad">
-<input type="submit" value="Submit" />
-</form>
-</li>
-
-<li><h3>Metodo <i>filtraPorEdad</i>: Devuelve aquellos alumnos mayores que la edad introducida</h3>
-<p><b>Tipo peticion:</b> POST</p>
-<p><b>Parametro entrada:</b> edad (tipo <i>entero</i>)</p>
-<p><b>Salida:</b> JSon de la forma: <i>{"code":"code", "message":"message", "result": [{"nombre":"Nombre 1","titulacion":"Titulacion 1","id":"11111111A","edad":20},{"nombre":"Nombre 4","titulacion":"Titulacion 2","id":"44444444A","edad":30}]}</i></p>
-
-<form action="filtraPorEdad" method="POST">
-<label for="edad">Edad:</label> <input type="text" name="edad">
-<input type="submit" value="Submit" />
-</form>
-</li>
-
-<li><h3>Metodo <i>filtraAlumnosPorTitulacion</i>: Devuelve aquellos alumnos cuya titulacion coincidan</h3>
-<p><b>Tipo peticion:</b> POST</p>
-<p><b>Parametro entrada:</b> titulacion (tipo <i>string</i>)</p>
-<p><b>Salida:</b> JSon de la forma: <i>{"code":"code", "message":"message", "result": [{"nombre":"Nombre 1","titulacion":"Titulacion 1","id":"11111111A","edad":20},{"nombre":"Nombre 4","titulacion":"Titulacion 2","id":"44444444A","edad":30}]}</i></p>
-
-<form action="filtraAlumnosPorTitulacion" method="POST">
-<label for="titulacion">Titulacion</label> <input type="text" name="titulacion">
-<input type="submit" value="Submit" />
-</form>
-</li>
-
-<li><h3>Metodo <i>filtraPorTitulacion</i>: Devuelve aquellos alumnos cuya titulacion coincidan</h3>
-<p><b>Tipo peticion:</b> POST</p>
-<p><b>Parametro entrada:</b> titulacion (tipo <i>string</i>)</p>
-<p><b>Salida:</b> JSon de la forma: <i>{"code":"code", "message":"message", "result": [{"nombre":"Nombre 1","titulacion":"Titulacion 1","id":"11111111A","edad":20},{"nombre":"Nombre 4","titulacion":"Titulacion 2","id":"44444444A","edad":30}]}</i></p>
-
-<form action="filtraPorTitulacion" method="POST">
-<label for="titulacion">Titulacion</label> <input type="text" name="titulacion">
-<input type="submit" value="Submit" />
-</form>
-</li>
-
-</ul> 
+    <h1>Test GetRoutesByDistanceServlet</h1>
+    <form action="getRoutesByDistance" method="get">
+        <label for="distance">Distance:</label>
+        <input type="number" id="distance" name="distance" step="0.1" min="0">
+        <input type="submit" value="Get Routes By Distance">
+    </form>
 </body>
 </html>

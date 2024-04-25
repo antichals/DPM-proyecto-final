@@ -1,18 +1,18 @@
-package DAO;
+package es.loyola.pdm.DAO;
 
 import java.util.Date;
 
-public class Photo {
+public class Comment {
     // Attributes
     private String username;
-    private String imgUrl;
+    private String content;
     private String location;
     private Date timestamp;
 
     // Constructor
-    public Photo(String username, String imgUrl, String location, Date timestamp) {
+    public Comment(String username, String content, String location, Date timestamp) {
         this.username = username;
-        this.imgUrl = imgUrl;
+        this.content = content;
         this.location = location;
         this.timestamp = timestamp;
     }
@@ -22,8 +22,8 @@ public class Photo {
         return username;
     }
 
-    public String getImgUrl() {
-        return imgUrl;
+    public String getContent() {
+        return content;
     }
 
     public String getLocation() {
@@ -38,8 +38,8 @@ public class Photo {
         this.username = username;
     }
 
-    public void setImgUrl(String imgUrl) {
-        this.imgUrl = imgUrl;
+    public void setContent(String content) {
+        this.content = content;
     }
 
     public void setLocation(String location) {

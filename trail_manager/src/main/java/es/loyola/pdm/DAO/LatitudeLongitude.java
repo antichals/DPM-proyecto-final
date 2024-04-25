@@ -1,4 +1,4 @@
-package DAO;
+package es.loyola.pdm.DAO;
 
 // LatitudeLongitude class for representing coordinates
 public class LatitudeLongitude {

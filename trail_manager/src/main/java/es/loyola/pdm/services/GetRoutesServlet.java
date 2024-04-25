@@ -1,10 +1,10 @@
-package services;
-import manager.RouteManager;
-import DAO.LatitudeLongitude;
-import DAO.Photo;
-import DAO.Rating;
-import DAO.Route;
-import DAO.Comment;
+package es.loyola.pdm.services;
+import es.loyola.pdm.manager.RouteManager;
+import es.loyola.pdm.DAO.LatitudeLongitude;
+import es.loyola.pdm.DAO.Photo;
+import es.loyola.pdm.DAO.Rating;
+import es.loyola.pdm.DAO.Route;
+import es.loyola.pdm.DAO.Comment;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 public class GetRoutesServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         RouteManager routeManager = new RouteManager();
         JSONArray routesJsonArray = new JSONArray();
         
@@ -81,7 +81,7 @@ public class GetRoutesServlet extends HttpServlet {
         response.getWriter().write(routesJsonArray.toString());
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
 }

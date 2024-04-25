@@ -1,4 +1,4 @@
-package DAO;
+package es.loyola.pdm.DAO;
 
 public class Rating {
     // Attributes
